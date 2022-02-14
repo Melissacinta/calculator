@@ -1,0 +1,93 @@
+* {
+
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.calculator {
+    max-width: 304px;
+    margin: 0 auto;
+    background-color: #907fee;
+    padding: 20px;
+    border: 4px double black;
+    border-radius: 8px;
+}
+
+.output-screen {
+    height: 100px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, .16);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.output {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    margin: 0;
+
+}
+
+.calculations {
+    position: absolute;
+    top: 0;
+    font-weight: 300;
+    right: 10px;
+}
+
+.top-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(56.5px, 1fr));
+    gap: 10px;
+}
+
+.top-buttons button,
+.bottom-buttons button {
+    height: 50px;
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, .16);
+    transition: all .05s ease-in-out;
+}
+
+.top-buttons button.operator,
+.bottom-buttons button, .top-buttons button.del {
+    background-color: tomato;
+    color: white;
+}
+
+.bottom-buttons {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.bottom-buttons button {
+    flex: 1;
+}
+
+.top-buttons button:hover,
+.bottom-buttons button:hover {
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0);
+    font-weight: 700;
+}
+
+
+.top-buttons :not(button.operator, button.del):hover {
+    background-color: #f0f0f0;
+}
